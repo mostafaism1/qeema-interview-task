@@ -1,0 +1,7 @@
+[
+  {
+    "DTC": { "actual": 55, "planned": 80, "change": 10 },
+    "DEN": { "actual": 90, "planned": 90, "change": 0 },
+    "departmentId": 5
+  }
+]

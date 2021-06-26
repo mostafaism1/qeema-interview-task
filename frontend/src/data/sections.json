@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Governence",
+    "departmentId": 5
+  },
+
+  {
+    "id": 2,
+    "name": "Digital Transform",
+    "departmentId": 5
+  },
+
+  {
+    "id": 3,
+    "name": "Operation Transform",
+    "departmentId": 5
+  },
+
+  {
+    "id": 4,
+    "name": "Service Experience",
+    "departmentId": 5
+  },
+
+  {
+    "id": 5,
+    "name": "Business Delivery",
+    "departmentId": 5
+  },
+
+  {
+    "id": 6,
+    "name": "HCD",
+    "departmentId": 5
+  }
+]
