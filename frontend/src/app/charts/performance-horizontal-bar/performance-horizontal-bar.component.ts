@@ -1,14 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AnimationModel } from '@syncfusion/ej2-angular-progressbar';
-
+import { Performance } from '../../shared/models/performance.model';
 @Component({
   selector: 'pm-performance-horizontal-bar',
   templateUrl: './performance-horizontal-bar.component.html',
   styleUrls: ['./performance-horizontal-bar.component.scss'],
 })
 export class PerformanceHorizontalBarComponent implements OnInit {
-  @Input() label: string;
-  @Input() percent: number;
+  @Input() performance: Performance;
   readonly trackColor: string = 'LightGrey';
   readonly animation: AnimationModel = {
     enable: true,

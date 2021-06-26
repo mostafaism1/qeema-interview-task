@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="space-around center">
   <div fxFlex="50%">
-    <p class="center">{{ label }}</p>
+    <p class="center">{{ performance.label }}</p>
   </div>
 
   <div fxFlex="37.5%">
@@ -9,16 +9,16 @@
       type="Linear"
       trackThickness="6"
       progressThickness="6"
-      [value]="percent"
-      [progressColor]="getProgressColor(percent)"
+      [value]="performance.percent"
+      [progressColor]="getProgressColor(performance.percent)"
       [trackColor]="trackColor"
       [animation]="animation"
-      [id]="label"
+      [id]="performance.label"
     >
     </ejs-progressbar>
   </div>
 
   <div fxFlex="12.5%">
-    <p class="center">{{ percent / 100 | percent }}</p>
+    <p class="center">{{ performance.percent / 100 | percent }}</p>
   </div>
 </div>
