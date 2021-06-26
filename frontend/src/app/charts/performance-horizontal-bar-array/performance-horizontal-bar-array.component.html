@@ -1,1 +1,7 @@
-<p>performance-horizontal-bar-array works!</p>
+<div fxLayout="column" fxLayoutAlign="space-around center">
+  <div *ngFor="let performance of performances" fxFlexFill>
+    <pm-performance-horizontal-bar
+      [performance]="performance"
+    ></pm-performance-horizontal-bar>
+  </div>
+</div>
