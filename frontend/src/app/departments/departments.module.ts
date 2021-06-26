@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { DepartmentsRoutingModule } from './departments-routing.module';
 import { DepartmentsComponent } from './departments.component';
+import { DepartmentGridComponent } from './department-grid/department-grid.component';
 
 
 @NgModule({
   declarations: [
-    DepartmentsComponent
+    DepartmentsComponent,
+    DepartmentGridComponent
   ],
   imports: [
     CommonModule,
