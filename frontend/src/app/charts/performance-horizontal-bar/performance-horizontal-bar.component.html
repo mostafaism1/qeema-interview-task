@@ -1,1 +1,24 @@
-<p>performance-horizontal-bar works!</p>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxFlex="50%">
+    <p class="center">{{ label }}</p>
+  </div>
+
+  <div fxFlex="37.5%">
+    <ejs-progressbar
+      class="center"
+      type="Linear"
+      trackThickness="6"
+      progressThickness="6"
+      [value]="percent"
+      [progressColor]="getProgressColor(percent)"
+      [trackColor]="trackColor"
+      [animation]="animation"
+      [id]="label"
+    >
+    </ejs-progressbar>
+  </div>
+
+  <div fxFlex="12.5%">
+    <p class="center">{{ percent / 100 | percent }}</p>
+  </div>
+</div>
