@@ -1,1 +1,22 @@
-<p>strategic-themes-progress works!</p>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title
+      >Strategic Themes Progress<span class="date">{{
+        date | date: "d MMM."
+      }}</span></mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="space-between stretch">
+      <div fxFlex="30%">
+        <pm-percentage-donut
+          [percent]="computeAveragePercent(performances)"
+        ></pm-percentage-donut>
+      </div>
+      <div fxFlex="70%">
+        <pm-performance-horizontal-bar-array [performances]="performances">
+        </pm-performance-horizontal-bar-array>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
