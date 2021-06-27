@@ -16,5 +16,6 @@ import { StrategicThemesProgressComponent } from './strategic-themes-progress/st
     StrategicThemesProgressComponent,
   ],
   imports: [CommonModule, ProgressBarModule, FlexLayoutModule, MatCardModule],
+  exports: [StrategicThemesProgressComponent],
 })
 export class ChartsModule {}
