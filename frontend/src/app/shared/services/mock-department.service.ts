@@ -17,9 +17,11 @@ export class MockDepartmentService implements DepartmentService {
   }
   getDepartmentMilestones(
     departmentId: number
-  ): Observable<DepartmentMilestones | undefined> {
+  ): Observable<DepartmentMilestones> {
     return this.http
       .get<DepartmentMilestones[]>('data/departments-milestones')
-      .pipe(map((dms) => dms.find((dm) => dm.departmentId == departmentId)));
+      .pipe(
+        map((dms) => dms.filter((dm) => dm.departmentId == departmentId)[0])
+      );
   }
 }
