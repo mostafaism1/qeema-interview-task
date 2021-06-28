@@ -15,11 +15,9 @@ export class MockSectionService implements SectionService {
   getSectionsByDepartment(departmentId: number): Observable<Section[]> {
     return this.http.get<Section[]>('data/sections.json');
   }
-  getSectionPerformance(
-    sectionId: number
-  ): Observable<SectionPerformance | undefined> {
+  getSectionPerformance(sectionId: number): Observable<SectionPerformance> {
     return this.http
       .get<SectionPerformance[]>('data/sections-performances.json')
-      .pipe(map((sps) => sps.find((sp) => sp.sectionId == sectionId)));
+      .pipe(map((sps) => sps.filter((sp) => sp.sectionId == sectionId)[0]));
   }
 }
