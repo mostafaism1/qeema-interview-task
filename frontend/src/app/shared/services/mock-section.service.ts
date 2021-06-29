@@ -24,7 +24,7 @@ export class MockSectionService implements SectionService {
   }
   getSectionPerformance(sectionId: number): Observable<SectionPerformance> {
     return this.http
-      .get<SectionPercent[]>('data/sections-performances.json')
+      .get<SectionPercent[]>('data/sections-percents.json')
       .pipe(
         map((sps) => sps.filter((sp) => sp.sectionId == sectionId)[0]),
         map(this.mapSectionPercentToSectionPerformance)
