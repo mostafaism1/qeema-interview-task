@@ -13,13 +13,30 @@
   </ng-template>
   <ng-template #main>
     <mat-card-content>
-      <div fxLayout="row" fxLayoutAlign="space-between stretch">
-        <div fxFlex="30%">
-          <pm-percentage-donut
-            [percent]="computeAveragePercent(performances)"
-          ></pm-percentage-donut>
+      <div
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutAlign="space-between stretch"
+      >
+        <div
+          fxFlex="30%"
+          fxFlex.xs="70%"
+          fxLayout.xs="row"
+          fxLayoutAlign.xs="space-between center"
+        >
+          <div fxFlex.xs="30%">
+            <pm-percentage-donut
+              [percent]="computeAveragePercent(performances)"
+            ></pm-percentage-donut>
+          </div>
+
+          <div fxFlex.xs="70%" fxHide.gt-xs>
+            <p>
+              On <span>{{ date | date: "dd MMMM" }}</span>
+            </p>
+          </div>
         </div>
-        <div fxFlex="70%">
+        <div fxFlex="70%" fxFlex.xs="30%">
           <pm-performance-horizontal-bar-array [performances]="performances">
           </pm-performance-horizontal-bar-array>
         </div>
