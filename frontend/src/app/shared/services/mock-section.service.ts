@@ -14,7 +14,13 @@ export class MockSectionService implements SectionService {
   constructor(private http: HttpClient) {}
 
   getSectionsByDepartment(departmentId: number): Observable<Section[]> {
-    return this.http.get<Section[]>('data/sections.json');
+    return this.http
+      .get<Section[]>('data/sections.json')
+      .pipe(
+        map((sections) =>
+          sections.filter((s) => s.departmentId == departmentId)
+        )
+      );
   }
   getSectionPerformance(sectionId: number): Observable<SectionPerformance> {
     return this.http
