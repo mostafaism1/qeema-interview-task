@@ -1,32 +1,38 @@
 [
   {
     "id": 1,
-    "performance": 48,
-    "sectionId": 1
+    "percent": 48,
+    "sectionId": 1,
+    "sectionName": "Governence"
   },
   {
     "id": 2,
-    "performance": 33,
-    "sectionId": 2
+    "percent": 33,
+    "sectionId": 2,
+    "sectionName": "Digital Transform"
   },
   {
     "id": 3,
-    "performance": 67,
-    "sectionId": 3
+    "percent": 67,
+    "sectionId": 3,
+    "sectionName": "Operation Transform"
   },
   {
     "id": 4,
-    "performance": 44,
-    "sectionId": 4
+    "percent": 44,
+    "sectionId": 4,
+    "sectionName": "Service Experience"
   },
   {
     "id": 5,
-    "performance": 51,
-    "sectionId": 5
+    "percent": 51,
+    "sectionId": 5,
+    "sectionName": "Business Delivery"
   },
   {
     "id": 6,
-    "performance": 80,
-    "sectionId": 6
+    "percent": 80,
+    "sectionId": 6,
+    "sectionName": "HCD"
   }
 ]
