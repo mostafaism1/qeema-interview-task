@@ -20,4 +20,9 @@ export class StrategicThemesProgressComponent implements OnInit {
       performances.length
     );
   }
+
+  // computes the number of performances with a percent less than 50.
+  computeRiskCount(performances: Performance[]): number {
+    return performances.filter((p) => p.percent < 50).length;
+  }
 }
