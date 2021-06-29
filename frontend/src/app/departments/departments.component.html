@@ -1,1 +1,8 @@
-<p>departments works!</p>
+<pm-department-grid
+  [departments]="departments"
+  (show)="departmentClickHandler($event)"
+></pm-department-grid>
+<pm-strategic-themes-progress
+  *ngIf="showStrategicThemesProgress"
+  [performances]="performances"
+></pm-strategic-themes-progress>
