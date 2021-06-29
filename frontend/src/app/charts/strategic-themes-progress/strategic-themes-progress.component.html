@@ -6,17 +6,24 @@
       }}</span></mat-card-title
     >
   </mat-card-header>
-  <mat-card-content>
-    <div fxLayout="row" fxLayoutAlign="space-between stretch">
-      <div fxFlex="30%">
-        <pm-percentage-donut
-          [percent]="computeAveragePercent(performances)"
-        ></pm-percentage-donut>
+
+  <div *ngIf="performances.length == 0; then error; else main"></div>
+  <ng-template #error>
+    <p>There is no data to show</p>
+  </ng-template>
+  <ng-template #main>
+    <mat-card-content>
+      <div fxLayout="row" fxLayoutAlign="space-between stretch">
+        <div fxFlex="30%">
+          <pm-percentage-donut
+            [percent]="computeAveragePercent(performances)"
+          ></pm-percentage-donut>
+        </div>
+        <div fxFlex="70%">
+          <pm-performance-horizontal-bar-array [performances]="performances">
+          </pm-performance-horizontal-bar-array>
+        </div>
       </div>
-      <div fxFlex="70%">
-        <pm-performance-horizontal-bar-array [performances]="performances">
-        </pm-performance-horizontal-bar-array>
-      </div>
-    </div>
-  </mat-card-content>
+    </mat-card-content>
+  </ng-template>
 </mat-card>
