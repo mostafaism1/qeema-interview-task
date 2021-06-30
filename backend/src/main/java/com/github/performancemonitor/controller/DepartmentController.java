@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping(path = "/departments", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api/departments", produces = MediaType.APPLICATION_JSON_VALUE)
 @AllArgsConstructor
 public class DepartmentController {
 
