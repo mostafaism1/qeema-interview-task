@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -42,4 +43,7 @@ public class Department {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "department")
     private List<Section> sections;
+
+    @OneToOne(fetch = FetchType.EAGER, mappedBy = "department")
+    private DepartmentMilestones departmentMilestones;
 }
