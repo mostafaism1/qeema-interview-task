@@ -6,18 +6,12 @@ import { Performance } from '../shared/models/performance.model';
 import { SectionPerformance } from '../shared/models/section-performance.model';
 import { Section } from '../shared/models/section.model';
 import { DepartmentService } from '../shared/services/department.service';
-import { MockDepartmentService } from '../shared/services/mock-department.service';
-import { MockSectionService } from '../shared/services/mock-section.service';
 import { SectionService } from '../shared/services/section.service';
 
 @Component({
   selector: 'pm-departments',
   templateUrl: './departments.component.html',
   styleUrls: ['./departments.component.scss'],
-  providers: [
-    { provide: DepartmentService, useClass: MockDepartmentService },
-    { provide: SectionService, useClass: MockSectionService },
-  ],
 })
 export class DepartmentsComponent implements OnInit {
   departments: Department[] = [];
