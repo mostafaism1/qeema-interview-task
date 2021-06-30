@@ -13,6 +13,7 @@ import com.github.performancemonitor.model.mapper.SectionToSectionDtoMapper;
 import com.github.performancemonitor.service.DepartmentService;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping(path = "/departments")
+@RequestMapping(path = "/departments", produces = MediaType.APPLICATION_JSON_VALUE)
 @AllArgsConstructor
 public class DepartmentController {
 
