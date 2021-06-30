@@ -66,12 +66,12 @@ Technical interview project for Qeema
 
    - The process of searching for a third-party charting library that can produce similar charts to the proposed designs proved very time consuming and ended unsuccessfully, which is why I had to build and assemble my own charts. I achieved through the use of [SyncFusion's ProgressBarModule](https://www.npmjs.com/package/@syncfusion/ej2-angular-progressbar), more specifically, the **linear** and **circular** progress bars.
    - I used the **linear** progress bar to build the horizontal progress bars on the Strategic Themes Progress.
-   - I used the **circular** progress bar to build the donut overall percentage on the Strategic Themes Progress.
-   - I used the Angular Flex Layout library to achieve responsive design.
-   - I used the Angular Material's MatGridListModule for the department grid.
+   - I used the **circular** progress bar to build the overall percentage donut on the Strategic Themes Progress.
+   - I used Angular Flex Layout library to achieve responsive design.
+   - I used Angular Material's MatGridListModule for the department grid.
    - Every service class implements an abstract class where services are defined.
-     - This technique allowed me to seamlessly switch between mock services implementations and real services implementations (one's that hit the backend for data).
-   - I tried to modularize, reuse and compose the components as much as possible, with each component responsible for a small and specific functionality of the overall application,
+     - This technique allowed me to seamlessly switch between a mock service implementation and real service implementation (one's that hit the backend for data).
+   - I tried to modularize, reuse and compose the components as much as possible, with each component responsible for a small and a specific functionality of the overall application,
    - I packaged sets of Angular artifacts that are related together in the same Angular module. This is to allow for better re-usablity and also faster load times by utilizing lazy-loading.
 
 2. Backend
@@ -95,4 +95,4 @@ Technical interview project for Qeema
 - Notes
   - I designed the layouts as proposed, but did not actually style the application due to my lack of css skills.
   - I did not manage to create any frontend components for the Monthly Milestone Tracker, but I did do the backend portion and frontend data models.
-    - The reason is the same as above, finding charting libraries that can produce similar visuals as the proposed designs is difficult.
+    - This is for the same as above, finding charting libraries that can produce similar visuals as the proposed designs is difficult.
