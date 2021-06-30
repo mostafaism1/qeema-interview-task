@@ -64,7 +64,7 @@ Technical interview project for Qeema
 
 1. Frontend
 
-   - The process of searching for a third-party charting library that can produce similar charts to the proposed designs proved very time consuming and ended unsuccessfully, which is why I had to build and assemble my own charts. I achieved through the use of [https://www.npmjs.com/package/@syncfusion/ej2-angular-progressbar](SyncFusion's ProgressBarModule), more specifically, the **linear** and **circular** progress bars.
+   - The process of searching for a third-party charting library that can produce similar charts to the proposed designs proved very time consuming and ended unsuccessfully, which is why I had to build and assemble my own charts. I achieved through the use of [SyncFusion's ProgressBarModule](https://www.npmjs.com/package/@syncfusion/ej2-angular-progressbar), more specifically, the **linear** and **circular** progress bars.
    - I used the **linear** progress bar to build the horizontal progress bars on the Strategic Themes Progress.
    - I used the **circular** progress bar to build the donut overall percentage on the Strategic Themes Progress.
    - I used the Angular Flex Layout library to achieve responsive design.
@@ -90,7 +90,7 @@ Technical interview project for Qeema
      5. Exceptions
      6. Configurations
 
-   - API Documentation: [http://localhost:8080/swagger-ui/](Swagger)
+   - API Documentation: [Swagger](http://localhost:8080/swagger-ui/)
 
 - Notes
   - I designed the layouts as proposed, but did not actually style the application due to my lack of css skills.
