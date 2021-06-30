@@ -15,7 +15,7 @@ public class SectionPercentDto {
 
     private int percent;
 
-    private int sectionId;
+    private long sectionId;
 
     private String sectionName;
 
