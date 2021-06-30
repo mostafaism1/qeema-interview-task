@@ -5,9 +5,11 @@ import com.github.performancemonitor.model.entity.SectionPercent;
 import com.github.performancemonitor.model.mapper.SectionPercentToSectionPercentDtoMapper;
 import com.github.performancemonitor.service.SectionService;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
@@ -21,6 +23,7 @@ public class SectionController {
     private final SectionPercentToSectionPercentDtoMapper sectionPercentMapper;
 
     @GetMapping(path = "/{sectionId}/percent")
+    @ResponseStatus(code = HttpStatus.OK)
     public SectionPercentDto getSectionPercent(@PathVariable(name = "sectionId") long sectionId) {
         SectionPercent sectionPercent = sectionService.getSecionPercent(sectionId);
         return sectionPercentMapper.apply(sectionPercent);
