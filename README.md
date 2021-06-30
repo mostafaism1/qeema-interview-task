@@ -78,8 +78,8 @@ Technical interview project for Qeema
 
    - Framework: **Spring Boot**.
    - Database: **H2**
+   - ORM: JPA/Hibernate
    - Application Layers:
-
      1. Models
         1. Entities
         2. Dtos
@@ -89,7 +89,9 @@ Technical interview project for Qeema
      4. Controllers
      5. Exceptions
      6. Configurations
-
+   - I used DTOs for all communications outside the application, so as not to expose my entities to the outside world.
+   - I created my own mappers to map between the application entities and the DTOs.
+   - All service classes implement an **interface** supertype where the service methods are defined; This is to **decouple** implementation and use of the services, and allow for quick and easy substitution of one implementation in place of another.
    - API Documentation: [Swagger](http://localhost:8080/swagger-ui/)
 
 - Notes
