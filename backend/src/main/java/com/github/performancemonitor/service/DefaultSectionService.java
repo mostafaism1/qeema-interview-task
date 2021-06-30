@@ -1,5 +1,6 @@
 package com.github.performancemonitor.service;
 
+import com.github.performancemonitor.exception.InvalidArgumentException;
 import com.github.performancemonitor.model.entity.Section;
 import com.github.performancemonitor.model.entity.SectionPercent;
 import com.github.performancemonitor.repository.SectionRepository;
@@ -17,7 +18,7 @@ public class DefaultSectionService implements SectionService {
     @Override
     public SectionPercent getSecionPercent(long sectionId) {
         Section section = sectionRepository.findById(sectionId)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid section id"));
+                .orElseThrow(() -> new InvalidArgumentException("Invalid section id"));
         return section.getSectionPercent();
     }
 
