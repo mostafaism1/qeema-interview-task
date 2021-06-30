@@ -31,8 +31,9 @@ public class DefaultDepartmentService implements DepartmentService {
 
     @Override
     public List<Section> getDepartmentSections(long departmentId) {
-        // TODO.
-        return null;
+        Department department = departmentRepository.findById(departmentId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid department id"));
+        return department.getSections();
     }
 
 }
