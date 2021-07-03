@@ -16,13 +16,10 @@ describe('DefaultDepartmentService', () => {
   beforeEach(() => {
     const spy = jasmine.createSpyObj('HttpClient', ['get']);
     TestBed.configureTestingModule({
-      providers: [
-        { provide: HttpClient, useValue: spy },
-        { provide: DepartmentService, useClass: DefaultDepartmentService },
-      ],
+      providers: [{ provide: HttpClient, useValue: spy }],
     });
     httpClientSpy = TestBed.inject(HttpClient) as jasmine.SpyObj<HttpClient>;
-    service = TestBed.inject(DepartmentService);
+    service = TestBed.inject(DefaultDepartmentService);
     department1 = {
       id: 1,
       name: 'Delivery',
@@ -76,7 +73,7 @@ describe('DefaultDepartmentService', () => {
     // When, then.
     service
       .getDepartmentMilestones(1)
-      .subscribe((actual) => expect(actual).toBe(expected));
+      .subscribe((actual) => expect(actual).toEqual(expected));
     done();
   });
 });
